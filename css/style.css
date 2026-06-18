@@ -27,6 +27,43 @@ body{
     overflow-y:auto;
 }
 
+.logo h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:58px;
+    line-height:0.85;
+}
+
+.logo span{
+    display:block;
+    margin-top:14px;
+    letter-spacing:8px;
+    color:#a1743d;
+    font-size:22px;
+}
+
+nav{
+    margin-top:55px;
+}
+
+nav ul{
+    list-style:none;
+}
+
+nav li{
+    margin-bottom:24px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-size:14px;
+}
+
+nav a span{
+    margin-right:14px;
+    color:#a1743d;
+}
+
 .sidebar-icons{
     margin-top:60px;
     display:flex;
@@ -67,43 +104,6 @@ body{
     display:flex;
     align-items:center;
     justify-content:center;
-}
-
-.logo h1{
-    font-family:'Cormorant Garamond', serif;
-    font-size:58px;
-    line-height:0.85;
-}
-
-.logo span{
-    display:block;
-    margin-top:14px;
-    letter-spacing:8px;
-    color:#a1743d;
-    font-size:22px;
-}
-
-nav{
-    margin-top:55px;
-}
-
-nav ul{
-    list-style:none;
-}
-
-nav li{
-    margin-bottom:24px;
-}
-
-nav a{
-    text-decoration:none;
-    color:#222;
-    font-size:14px;
-}
-
-nav a span{
-    margin-right:14px;
-    color:#a1743d;
 }
 
 .discount-box{
@@ -352,17 +352,8 @@ main{
     font-size:12px;
 }
 
-/* Cursor */
-.card,
-.feature,
-button,
-nav a{
-    cursor:pointer;
-}
-
 /* Tablet */
 @media (max-width:1024px){
-
     .features{
         grid-template-columns:repeat(2,1fr);
     }
@@ -387,36 +378,54 @@ nav a{
         position:relative;
         width:100%;
         height:auto;
-        padding:25px 20px;
-        text-align:center;
+        padding:20px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
         border-right:none;
     }
 
     .logo h1{
-        font-size:48px;
+        font-size:42px;
+        text-align:center;
     }
 
     .logo span{
-        font-size:16px;
+        font-size:14px;
         letter-spacing:6px;
+        text-align:center;
     }
 
     nav{
-        margin-top:35px;
+        margin-top:25px;
+        width:100%;
+    }
+
+    nav ul{
+        display:flex;
+        overflow-x:auto;
+        gap:18px;
+        padding-bottom:10px;
+        justify-content:flex-start;
     }
 
     nav li{
-        margin-bottom:16px;
+        margin-bottom:0;
+        white-space:nowrap;
+    }
+
+    nav a{
+        font-size:13px;
     }
 
     .sidebar-icons{
-        margin-top:30px;
+        margin-top:20px;
         justify-content:center;
-        gap:18px;
+        gap:20px;
     }
 
     .discount-box{
-        margin-top:30px;
+        display:none;
     }
 
     main{
@@ -425,11 +434,12 @@ nav a{
     }
 
     .hero{
-        min-height:420px;
-        padding:45px 25px;
+        min-height:520px;
+        padding:50px 25px;
         text-align:center;
         justify-content:center;
-        border-bottom-left-radius:45px;
+        background-position:center;
+        border-bottom-left-radius:50px;
     }
 
     .hero-text{
@@ -442,21 +452,26 @@ nav a{
     }
 
     .hero-text h2{
-        font-size:55px;
+        font-size:58px;
     }
 
     .hero-text h3{
-        font-size:42px;
+        font-size:45px;
     }
 
     .description{
         margin:25px auto;
-        font-size:13px;
+        font-size:15px;
+        max-width:340px;
     }
 
     .features{
         grid-template-columns:1fr;
-        padding:30px 20px;
+        padding:35px 20px;
+    }
+
+    .feature{
+        padding:28px;
     }
 
     .categories{
@@ -478,7 +493,7 @@ nav a{
     }
 
     .card img{
-        height:230px;
+        height:250px;
     }
 
     .footer{
